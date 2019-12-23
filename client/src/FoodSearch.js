@@ -65,20 +65,11 @@ class FoodSearch extends React.Component {
               <th colSpan="5">
                 <div className="ui fluid search">
                   <div className="ui icon input">
-                    <input
-                      className="prompt"
-                      type="text"
-                      placeholder="Search foods..."
-                      value={this.state.searchValue}
-                      onChange={this.handleSearchChange}
-                    />
+                    <input className="prompt" type="text" placeholder="Search foods..." value={this.state.searchValue} onChange={this.handleSearchChange} />
+
                     <i className="search icon" />
                   </div>
-                  <i
-                    className="remove icon"
-                    onClick={this.handleSearchCancel}
-                    style={removeIconStyle}
-                  />
+                  <i className="remove icon" onClick={this.handleSearchCancel} style={removeIconStyle} />
                 </div>
               </th>
             </tr>
@@ -90,9 +81,7 @@ class FoodSearch extends React.Component {
               <th>Carbs (g)</th>
             </tr>
           </thead>
-          <tbody>
-            {foodRows}
-          </tbody>
+          <tbody>{foodRows}</tbody>
         </table>
       </div>
     );

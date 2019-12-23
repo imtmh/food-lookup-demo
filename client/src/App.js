@@ -8,9 +8,7 @@ class App extends Component {
   };
 
   removeFoodItem = itemIndex => {
-    const filteredFoods = this.state.selectedFoods.filter(
-      (item, idx) => itemIndex !== idx
-    );
+    const filteredFoods = this.state.selectedFoods.filter((item, idx) => itemIndex !== idx);
     this.setState({ selectedFoods: filteredFoods });
   };
 
@@ -25,10 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="ui text container">
-          <SelectedFoods
-            foods={selectedFoods}
-            onFoodClick={this.removeFoodItem}
-          />
+          <SelectedFoods foods={selectedFoods} onFoodClick={this.removeFoodItem} />
           <FoodSearch onFoodClick={this.addFood} />
         </div>
       </div>
